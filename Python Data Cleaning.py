@@ -17,6 +17,6 @@ print (df['NUM_BEDROOMS'].isnull())
 missing_values = ["n/a", "na", "--"]
 df = pd.read_csv("property-data.csv", na_values = missing_values)
 
-#Looking at columns after adding a list of Null values 
+#Looking at columns after adding a list of Null values
 print (df['NUM_BEDROOMS'])
 print (df['NUM_BEDROOMS'].isnull())
