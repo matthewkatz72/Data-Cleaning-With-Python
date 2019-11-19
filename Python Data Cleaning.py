@@ -20,3 +20,13 @@ df = pd.read_csv("property-data.csv", na_values = missing_values)
 #Looking at columns after adding a list of Null values
 print (df['NUM_BEDROOMS'])
 print (df['NUM_BEDROOMS'].isnull())
+
+# Detecting numbers
+cnt=0
+for row in df['OWN_OCCUPIED']:
+    try:
+        int(row)
+        df.loc[cnt, 'OWN_OCCUPIED']=np.nan
+    except ValueError:
+        pass
+    cnt+=1
