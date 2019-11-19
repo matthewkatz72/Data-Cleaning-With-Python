@@ -30,3 +30,12 @@ for row in df['OWN_OCCUPIED']:
     except ValueError:
         pass
     cnt+=1
+
+# Total missing values for each feature
+print df.isnull().sum()
+
+# Any missing values?
+print df.isnull().values.any()
+
+# Total number of missing values
+print df.isnull().sum().sum()
